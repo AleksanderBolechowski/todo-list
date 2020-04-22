@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/AleksanderBolechowski/todo-list/issues"
   },
-  "homepage": "https://github.com/AleksanderBolechowski/todo-list#readme"
+  "homepage": "https://github.com/AleksanderBolechowski/todo-list#readme",
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0"
+  }
 }
