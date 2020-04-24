@@ -3,11 +3,12 @@ const Koa = require('koa')
 const serve = require('koa-static')
 const app = new Koa()
 const logger = require('koa-logger') 
+const favicon = require('koa-favicon')
 app.use(logger())
 const port = process.env.PORT || 3000
 
 app.use(serve(path.resolve(__dirname, '..', 'client')))
-
+app.use(favicon(path.join('./client/favicon.ico')));
 const userRoutes = require('./routes/users')
 app.use(userRoutes.routes())
 
