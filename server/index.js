@@ -5,6 +5,7 @@ const app = new Koa()
 const logger = require('koa-logger') 
 const favicon = require('koa-favicon')
 app.use(logger())
+require('./store').init()
 const port = process.env.PORT || 3000
 
 app.use(serve(path.resolve(__dirname, '..', 'client')))
